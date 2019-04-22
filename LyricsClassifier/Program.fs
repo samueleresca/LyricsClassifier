@@ -66,7 +66,6 @@ let main _argv =
                msft.Rows
                |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
                |> Seq.filter (fun row -> not(String.Equals(row.GetColumn "lyrics", "[Instrumental]", StringComparison.OrdinalIgnoreCase)))
-               |> Seq.take 60000
                |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
                                          Artist = (row.GetColumn "artist")
                                          Genre = (row.GetColumn "genre")

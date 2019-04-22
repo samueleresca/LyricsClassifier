@@ -1,0 +1,1023 @@
+2019-04-20 17:23:32 - Reporting 0 opened comms
+2019-04-20 17:29:23 - shutdown request
+2019-04-20 17:29:23 - shutdown request
+2019-04-20 17:33:27 - Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+2019-04-20 17:33:27 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2019-04-20 17:33:27 - For help type #help;;
+2019-04-20 17:33:27 - > val it :
+2019-04-20 17:33:27 -   ResizeArray<System.Type *
+2019-04-20 17:33:27 -               (obj ->
+2019-04-20 17:33:27 -                  seq<string *
+2019-04-20 17:33:27 -                      string> *
+2019-04-20 17:33:27 -                  string)>
+2019-04-20 17:33:27 - = seq []
+2019-04-20 17:33:27 - --> Added '/Users/samuele.resca/Downloads/IfSharp.v3.0.1' to library include path
+2019-04-20 17:33:27 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2019-04-20 17:33:27 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/NetMQ.dll' (file may be locked by F# Interactive process)
+2019-04-20 17:33:27 - Reporting 0 opened comms
+2019-04-20 17:38:14 - Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+2019-04-20 17:38:14 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2019-04-20 17:38:14 - For help type #help;;
+2019-04-20 17:38:14 - > val it :
+2019-04-20 17:38:14 -   ResizeArray<System.Type *
+2019-04-20 17:38:14 -               (obj ->
+2019-04-20 17:38:14 -                  seq<string *
+2019-04-20 17:38:14 -                      string> *
+2019-04-20 17:38:14 -                  string)>
+2019-04-20 17:38:14 - = seq []
+2019-04-20 17:38:14 - --> Added '/Users/samuele.resca/Downloads/IfSharp.v3.0.1' to library include path
+2019-04-20 17:38:14 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2019-04-20 17:38:14 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/NetMQ.dll' (file may be locked by F# Interactive process)
+2019-04-21 11:27:25 - Reporting 0 opened comms
+2019-04-21 11:36:43 - shutdown request
+2019-04-21 11:36:47 - Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+2019-04-21 11:36:47 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2019-04-21 11:36:47 - For help type #help;;
+2019-04-21 11:36:47 - > val it :
+2019-04-21 11:36:47 -   ResizeArray<System.Type *
+2019-04-21 11:36:47 -               (obj ->
+2019-04-21 11:36:47 -                  seq<string *
+2019-04-21 11:36:47 -                      string> *
+2019-04-21 11:36:47 -                  string)>
+2019-04-21 11:36:47 - = seq []
+2019-04-21 11:36:47 - --> Added '/Users/samuele.resca/Downloads/IfSharp.v3.0.1' to library include path
+2019-04-21 11:36:47 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2019-04-21 11:36:47 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/NetMQ.dll' (file may be locked by F# Interactive process)
+2019-04-21 11:37:50 - Reporting 0 opened comms
+2019-04-21 23:32:45 - #load "Paket.fsx"
+2019-04-21 23:32:45 - Paket.Package 
+2019-04-21 23:32:45 -   ["XPlot.Plotly"
+2019-04-21 23:32:45 -    "MathNet.Numerics"
+2019-04-21 23:32:45 -    "MathNet.Numerics.FSharp"
+2019-04-21 23:32:45 -    "FSharp.Data"
+2019-04-21 23:32:45 -    "Microsoft.ML"]
+2019-04-21 23:32:45 -    
+2019-04-21 23:32:45 - #load "XPlot.Plotly.Paket.fsx"
+2019-04-21 23:32:45 - #load "XPlot.Plotly.fsx"
+2019-04-21 23:32:45 - #load "Paket.Generated.Refs.fsx"
+2019-04-21 23:33:08 - open System
+2019-04-21 23:33:08 - open System.Linq
+2019-04-21 23:33:08 - open System.IO
+2019-04-21 23:33:08 - open MathNet.Numerics
+2019-04-21 23:33:08 - open MathNet.Numerics.Distributions
+2019-04-21 23:33:08 - open MathNet.Numerics.LinearAlgebra
+2019-04-21 23:33:08 - open MathNet.Numerics.Random
+2019-04-21 23:33:08 - open FSharp.Data
+2019-04-21 23:33:08 - [<CLIMutable>]
+2019-04-21 23:33:08 - type LyricsInput = 
+2019-04-21 23:33:08 -     {
+2019-04-21 23:33:08 -         Song : string
+2019-04-21 23:33:08 -         Artist : string
+2019-04-21 23:33:08 -         Genre : string
+2019-04-21 23:33:08 -         Lyrics : string
+2019-04-21 23:33:08 -         Year: int
+2019-04-21 23:33:08 -     }
+2019-04-21 23:33:08 -     
+2019-04-21 23:33:08 -     let trainDataPath = Path.Combine("./","Data","lyrics.csv")   
+2019-04-21 23:33:08 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-21 23:33:08 -     
+2019-04-21 23:33:08 -     let songLyrics = 
+2019-04-21 23:33:08 -            msft.Rows
+2019-04-21 23:33:08 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-21 23:33:08 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-21 23:33:08 -                                      Artist = (row.GetColumn "artist")
+2019-04-21 23:33:08 -                                      Genre = (row.GetColumn "genre")
+2019-04-21 23:33:08 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-21 23:33:08 -                                      Year = (row.GetColumn "year") |> int
+2019-04-21 23:33:08 -                                   })
+2019-04-21 23:33:08 -                               
+2019-04-21 23:33:08 - Expression evaluation failed: Could not find a part of the path "/Users/samuele.resca/Projects/LyricsClassifier/Analysis/Data/lyrics.csv".
+2019-04-21 23:33:08 - DirectoryNotFoundExceptionCould not find a part of the path "/Users/samuele.resca/Projects/LyricsClassifier/Analysis/Data/lyrics.csv".
+2019-04-21 23:33:08 -   at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+2019-04-21 23:33:08 -   at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6e26a535bf76467f9082042847cb7d56>:0 
+2019-04-21 23:33:08 - songLyrics
+2019-04-21 23:33:08 -     |> Seq.iter(fun row -> Console.WriteLine(row))
+2019-04-21 23:33:08 -        
+2019-04-21 23:33:08 - The value or constructor 'songLyrics' is not defined.
+2019-04-21 23:33:08 - A unique overload for method 'WriteLine' could not be determined based on type information prior to this program point. A type annotation may be needed. Candidates: Console.WriteLine(buffer: char []) : unit, Console.WriteLine(format: string, [<ParamArray>] arg: obj []) : unit, Console.WriteLine(value: bool) : unit, Console.WriteLine(value: char) : unit, Console.WriteLine(value: decimal) : unit, Console.WriteLine(value: float) : unit, Console.WriteLine(value: float32) : unit, Console.WriteLine(value: int) : unit, Console.WriteLine(value: int64) : unit, Console.WriteLine(value: obj) : unit, Console.WriteLine(value: string) : unit, Console.WriteLine(value: uint32) : unit, Console.WriteLine(value: uint64) : unit
+2019-04-21 23:33:08 - open XPlot.Plotly
+2019-04-21 23:33:08 - songLyrics
+2019-04-21 23:33:08 -         |> Seq.map(fun row -> row.Genre)
+2019-04-21 23:33:08 -         |> Seq.countBy id |> Seq.toList 
+2019-04-21 23:33:08 -         |> Chart.Pie
+2019-04-21 23:33:08 -         |> Chart.WithTitle "Dataset by Genre"
+2019-04-21 23:33:08 -         |> Chart.WithLegend true
+2019-04-21 23:33:08 - The value or constructor 'songLyrics' is not defined.
+2019-04-21 23:33:08 - open XPlot.Plotly
+2019-04-21 23:33:08 - songLyrics
+2019-04-21 23:33:08 -         |> Seq.map(fun row -> row.Year)
+2019-04-21 23:33:08 -         |> Seq.countBy id |> Seq.toList 
+2019-04-21 23:33:08 -         |> Chart.Pie
+2019-04-21 23:33:08 -         |> Chart.WithTitle "Dataset by Year"
+2019-04-21 23:33:08 -         |> Chart.WithLegend true
+2019-04-21 23:33:08 - The value or constructor 'songLyrics' is not defined.
+2019-04-21 23:33:08 - open Microsoft.ML
+2019-04-21 23:33:08 - open Microsoft.ML
+2019-04-21 23:33:08 - open Microsoft.ML.Data
+2019-04-21 23:33:08 - open Microsoft.ML.Transforms.Text
+2019-04-21 23:33:08 - let stopwords = [|"ourselves"; "hers"; "between"; "yourself"; "but"; "again"; "there"; "about"; "once"; "during"; "out"; "very"; "having"; "with"; "they"; "own"; "an"; "be"; "some"; "for"; "do"; "its"; "yours"; "such"; "into"; "of"; "most"; "itself"; "other"; "off"; "is"; "s"; "am"; "or"; "who"; "as"; "from"; "him"; "each"; "the"; "themselves"; "until"; "below"; "are"; "we"; "these"; "your"; "his"; "through"; "don"; "nor"; "me"; "were"; "her"; "more"; "himself"; "this"; "down"; "should"; "our"; "their"; "while"; "above"; "both"; "up"; "to"; "ours"; "had"; "she"; "all"; "no"; "when"; "at"; "any"; "before"; "them"; "same"; "and"; "been"; "have"; "in"; "will"; "on"; "does"; "yourselves"; "then"; "that"; "because"; "what"; "over"; "why"; "so"; "can"; "did"; "not"; "now"; "under"; "he"; "you"; "herself"; "has"; "just"; "where"; "too"; "only"; "myself"; "which"; "those"; "i"; "after"; "few"; "whom"; "t";"ll"; "being"; "if"; "theirs"; "my"; "against"; "a"; "by"; "doing"; "it"; "how"; "further"; "was"; "here"; "than"; "s"; "t"; "m"; "'re"; "'ll";"ve";"..."; "ä±"; "''"; "``"; "--"; "'d"; "el"; "la"; "que"; "y"; "de"; "en"|]
+2019-04-21 23:33:08 - let symbols = [|'\''; ' '; ','|]
+2019-04-21 23:33:08 -             
+2019-04-21 23:33:08 - let renderLineChartForWords(words: seq<string>) = 
+2019-04-21 23:33:08 -             words
+2019-04-21 23:33:08 -                 |> Seq.countBy id 
+2019-04-21 23:33:08 -                 |> Seq.sortByDescending(fun (value:string, count :int) -> count)
+2019-04-21 23:33:08 -                 |> Seq.take 15
+2019-04-21 23:33:08 -                 |> Chart.Line
+2019-04-21 23:33:08 -                         
+2019-04-21 23:33:08 - let tranformText (lyrics: seq<LyricsInput>) =
+2019-04-21 23:33:08 -             let mlContext = MLContext(seed = Nullable 0)        
+2019-04-21 23:33:08 -             let data = mlContext.Data.LoadFromEnumerable lyrics
+2019-04-21 23:33:08 -             
+2019-04-21 23:33:08 -             let pipeline = mlContext.Transforms.Text.FeaturizeText("FeaturizedLyrics", "Lyrics")
+2019-04-21 23:33:08 -                                             .Append(mlContext.Transforms.Text.NormalizeText("NormalizedLyrics", "Lyrics"))
+2019-04-21 23:33:08 -                                             .Append(mlContext.Transforms.Text.TokenizeWords("TokenizedLyric", "NormalizedLyrics", symbols))
+2019-04-21 23:33:08 -                                             .Append(mlContext.Transforms.Text.RemoveStopWords("LyricsWithNoCustomStopWords", "TokenizedLyric", stopwords))
+2019-04-21 23:33:08 -                                             .Append(mlContext.Transforms.Text.RemoveDefaultStopWords("LyricsWithNoStopWords", "LyricsWithNoCustomStopWords"))
+2019-04-21 23:33:08 -             let transformedData = pipeline.Fit(data).Transform(data)
+2019-04-21 23:33:08 -             transformedData.GetColumn<string[]>(mlContext, "LyricsWithNoStopWords")
+2019-04-21 23:33:08 -                         |> Seq.concat
+2019-04-21 23:33:08 -                         |> Seq.toList
+2019-04-21 23:33:08 - The value, namespace, type or module 'Chart' is not defined. Maybe you want one of the following:
+2019-04-21 23:33:08 -    Char
+2019-04-21 23:33:08 -    char
+2019-04-21 23:33:08 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Rock" )
+2019-04-21 23:33:08 - tokenizeLyrics filteredLyrics
+2019-04-21 23:33:08 -         |> renderLineChartForWords
+2019-04-21 23:33:08 - The value or constructor 'songLyrics' is not defined.
+2019-04-21 23:33:08 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-21 23:33:08 - The value or constructor 'renderLineChartForWords' is not defined.
+2019-04-21 23:33:08 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Hip-Hop" )
+2019-04-21 23:33:08 - tokenizeLyrics filteredLyrics
+2019-04-21 23:33:08 -         |> renderLineChartForWords
+2019-04-21 23:33:08 - The value or constructor 'songLyrics' is not defined.
+2019-04-21 23:33:08 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-21 23:33:08 - The value or constructor 'renderLineChartForWords' is not defined.
+2019-04-21 23:33:08 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Pop" )
+2019-04-21 23:33:08 - tokenizeLyrics filteredLyrics
+2019-04-21 23:33:08 -         |> renderLineChartForWords
+2019-04-21 23:33:08 - The value or constructor 'songLyrics' is not defined.
+2019-04-21 23:33:08 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-21 23:33:08 - The value or constructor 'renderLineChartForWords' is not defined.
+2019-04-21 23:33:08 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Jazz" )
+2019-04-21 23:33:08 - tokenizeLyrics filteredLyrics
+2019-04-21 23:33:08 -         |> renderLineChartForWords
+2019-04-21 23:33:08 - The value or constructor 'songLyrics' is not defined.
+2019-04-21 23:33:08 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-21 23:33:08 - The value or constructor 'renderLineChartForWords' is not defined.
+2019-04-21 23:35:05 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-21 23:35:05 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-21 23:35:05 -     
+2019-04-21 23:35:05 -     let songLyrics = 
+2019-04-21 23:35:05 -            msft.Rows
+2019-04-21 23:35:05 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-21 23:35:05 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-21 23:35:05 -                                      Artist = (row.GetColumn "artist")
+2019-04-21 23:35:05 -                                      Genre = (row.GetColumn "genre")
+2019-04-21 23:35:05 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-21 23:35:05 -                                      Year = (row.GetColumn "year") |> int
+2019-04-21 23:35:05 -                                   })
+2019-04-21 23:35:05 -                               
+2019-04-22 10:56:42 - Reporting 0 opened comms
+2019-04-22 10:57:10 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-22 10:57:10 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-22 10:57:10 -     
+2019-04-22 10:57:10 -     let songLyrics = 
+2019-04-22 10:57:10 -            msft.Rows
+2019-04-22 10:57:10 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-22 10:57:10 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-22 10:57:10 -                                      Artist = (row.GetColumn "artist")
+2019-04-22 10:57:10 -                                      Genre = (row.GetColumn "genre")
+2019-04-22 10:57:10 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-22 10:57:10 -                                      Year = (row.GetColumn "year") |> int
+2019-04-22 10:57:10 -                                   })
+2019-04-22 10:57:10 -                               
+2019-04-22 10:57:10 - Expression evaluation failed: Sharing violation on path /Users/samuele.resca/Projects/LyricsClassifier/Data/lyrics.csv
+2019-04-22 10:57:10 - IOExceptionSharing violation on path /Users/samuele.resca/Projects/LyricsClassifier/Data/lyrics.csv
+2019-04-22 10:57:10 -   at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+2019-04-22 10:57:10 -   at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6e26a535bf76467f9082042847cb7d56>:0 
+2019-04-22 10:57:17 - shutdown request
+2019-04-22 10:57:25 - Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+2019-04-22 10:57:25 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2019-04-22 10:57:25 - For help type #help;;
+2019-04-22 10:57:25 - > val it :
+2019-04-22 10:57:25 -   ResizeArray<System.Type *
+2019-04-22 10:57:25 -               (obj ->
+2019-04-22 10:57:25 -                  seq<string *
+2019-04-22 10:57:25 -                      string> *
+2019-04-22 10:57:25 -                  string)>
+2019-04-22 10:57:25 - = seq []
+2019-04-22 10:57:25 - --> Added '/Users/samuele.resca/Downloads/IfSharp.v3.0.1' to library include path
+2019-04-22 10:57:25 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2019-04-22 10:57:25 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/NetMQ.dll' (file may be locked by F# Interactive process)
+2019-04-22 10:57:25 - #load "Paket.fsx"
+2019-04-22 10:57:25 - Paket.Package 
+2019-04-22 10:57:25 -   ["XPlot.Plotly"
+2019-04-22 10:57:25 -    "MathNet.Numerics"
+2019-04-22 10:57:25 -    "MathNet.Numerics.FSharp"
+2019-04-22 10:57:25 -    "FSharp.Data"
+2019-04-22 10:57:25 -    "Microsoft.ML"]
+2019-04-22 10:57:25 -    
+2019-04-22 10:57:25 - #load "XPlot.Plotly.Paket.fsx"
+2019-04-22 10:57:25 - #load "XPlot.Plotly.fsx"
+2019-04-22 10:57:25 - #load "Paket.Generated.Refs.fsx"
+2019-04-22 10:57:49 - open System
+2019-04-22 10:57:49 - open System.Linq
+2019-04-22 10:57:49 - open System.IO
+2019-04-22 10:57:49 - open MathNet.Numerics
+2019-04-22 10:57:49 - open MathNet.Numerics.Distributions
+2019-04-22 10:57:49 - open MathNet.Numerics.LinearAlgebra
+2019-04-22 10:57:49 - open MathNet.Numerics.Random
+2019-04-22 10:57:49 - open FSharp.Data
+2019-04-22 10:57:49 - [<CLIMutable>]
+2019-04-22 10:57:49 - type LyricsInput = 
+2019-04-22 10:57:49 -     {
+2019-04-22 10:57:49 -         Song : string
+2019-04-22 10:57:49 -         Artist : string
+2019-04-22 10:57:49 -         Genre : string
+2019-04-22 10:57:49 -         Lyrics : string
+2019-04-22 10:57:49 -         Year: int
+2019-04-22 10:57:49 -     }
+2019-04-22 10:57:49 -     
+2019-04-22 10:57:49 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-22 10:57:49 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-22 10:57:49 -     
+2019-04-22 10:57:49 -     let songLyrics = 
+2019-04-22 10:57:49 -            msft.Rows
+2019-04-22 10:57:49 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-22 10:57:49 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-22 10:57:49 -                                      Artist = (row.GetColumn "artist")
+2019-04-22 10:57:49 -                                      Genre = (row.GetColumn "genre")
+2019-04-22 10:57:49 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-22 10:57:49 -                                      Year = (row.GetColumn "year") |> int
+2019-04-22 10:57:49 -                                   })
+2019-04-22 10:57:49 -                               
+2019-04-22 10:57:50 - songLyrics
+2019-04-22 10:57:50 -     |> Seq.iter(fun row -> Console.WriteLine(row))
+2019-04-22 10:57:50 -        
+2019-04-22 11:01:01 - open XPlot.Plotly
+2019-04-22 11:01:01 - songLyrics
+2019-04-22 11:01:01 -         |> Seq.map(fun row -> row.Genre)
+2019-04-22 11:01:01 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 11:01:01 -         |> Chart.Pie
+2019-04-22 11:01:01 -         |> Chart.WithTitle "Dataset by Genre"
+2019-04-22 11:01:01 -         |> Chart.WithLegend true
+2019-04-22 11:01:27 - open XPlot.Plotly
+2019-04-22 11:01:27 - songLyrics
+2019-04-22 11:01:27 -         |> Seq.map(fun row -> row.Year)
+2019-04-22 11:01:27 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 11:01:27 -         |> Chart.Pie
+2019-04-22 11:01:27 -         |> Chart.WithTitle "Dataset by Year"
+2019-04-22 11:01:27 -         |> Chart.WithLegend true
+2019-04-22 11:01:55 - open Microsoft.ML
+2019-04-22 11:01:55 - open Microsoft.ML
+2019-04-22 11:01:55 - open Microsoft.ML.Data
+2019-04-22 11:01:55 - open Microsoft.ML.Transforms.Text
+2019-04-22 11:01:55 - let stopwords = [|"ourselves"; "hers"; "between"; "yourself"; "but"; "again"; "there"; "about"; "once"; "during"; "out"; "very"; "having"; "with"; "they"; "own"; "an"; "be"; "some"; "for"; "do"; "its"; "yours"; "such"; "into"; "of"; "most"; "itself"; "other"; "off"; "is"; "s"; "am"; "or"; "who"; "as"; "from"; "him"; "each"; "the"; "themselves"; "until"; "below"; "are"; "we"; "these"; "your"; "his"; "through"; "don"; "nor"; "me"; "were"; "her"; "more"; "himself"; "this"; "down"; "should"; "our"; "their"; "while"; "above"; "both"; "up"; "to"; "ours"; "had"; "she"; "all"; "no"; "when"; "at"; "any"; "before"; "them"; "same"; "and"; "been"; "have"; "in"; "will"; "on"; "does"; "yourselves"; "then"; "that"; "because"; "what"; "over"; "why"; "so"; "can"; "did"; "not"; "now"; "under"; "he"; "you"; "herself"; "has"; "just"; "where"; "too"; "only"; "myself"; "which"; "those"; "i"; "after"; "few"; "whom"; "t";"ll"; "being"; "if"; "theirs"; "my"; "against"; "a"; "by"; "doing"; "it"; "how"; "further"; "was"; "here"; "than"; "s"; "t"; "m"; "'re"; "'ll";"ve";"..."; "ä±"; "''"; "``"; "--"; "'d"; "el"; "la"; "que"; "y"; "de"; "en"|]
+2019-04-22 11:01:55 - let symbols = [|'\''; ' '; ','|]
+2019-04-22 11:01:55 -             
+2019-04-22 11:01:55 - let renderLineChartForWords(words: seq<string>) = 
+2019-04-22 11:01:55 -             words
+2019-04-22 11:01:55 -                 |> Seq.countBy id 
+2019-04-22 11:01:55 -                 |> Seq.sortByDescending(fun (value:string, count :int) -> count)
+2019-04-22 11:01:55 -                 |> Seq.take 15
+2019-04-22 11:01:55 -                 |> Chart.Line
+2019-04-22 11:01:55 -                         
+2019-04-22 11:01:55 - let tranformText (lyrics: seq<LyricsInput>) =
+2019-04-22 11:01:55 -             let mlContext = MLContext(seed = Nullable 0)        
+2019-04-22 11:01:55 -             let data = mlContext.Data.LoadFromEnumerable lyrics
+2019-04-22 11:01:55 -             
+2019-04-22 11:01:55 -             let pipeline = mlContext.Transforms.Text.FeaturizeText("FeaturizedLyrics", "Lyrics")
+2019-04-22 11:01:55 -                                             .Append(mlContext.Transforms.Text.NormalizeText("NormalizedLyrics", "Lyrics"))
+2019-04-22 11:01:55 -                                             .Append(mlContext.Transforms.Text.TokenizeWords("TokenizedLyric", "NormalizedLyrics", symbols))
+2019-04-22 11:01:55 -                                             .Append(mlContext.Transforms.Text.RemoveStopWords("LyricsWithNoCustomStopWords", "TokenizedLyric", stopwords))
+2019-04-22 11:01:55 -                                             .Append(mlContext.Transforms.Text.RemoveDefaultStopWords("LyricsWithNoStopWords", "LyricsWithNoCustomStopWords"))
+2019-04-22 11:01:55 -             let transformedData = pipeline.Fit(data).Transform(data)
+2019-04-22 11:01:55 -             transformedData.GetColumn<string[]>(mlContext, "LyricsWithNoStopWords")
+2019-04-22 11:01:55 -                         |> Seq.concat
+2019-04-22 11:01:55 -                         |> Seq.toList
+2019-04-22 11:01:55 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Rock" )
+2019-04-22 11:01:55 - tokenizeLyrics filteredLyrics
+2019-04-22 11:01:55 -         |> renderLineChartForWords
+2019-04-22 11:01:55 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:01:55 - Reporting 0 opened comms
+2019-04-22 11:01:55 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Hip-Hop" )
+2019-04-22 11:01:55 - tokenizeLyrics filteredLyrics
+2019-04-22 11:01:55 -         |> renderLineChartForWords
+2019-04-22 11:01:55 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:01:58 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Pop" )
+2019-04-22 11:01:58 - tokenizeLyrics filteredLyrics
+2019-04-22 11:01:58 -         |> renderLineChartForWords
+2019-04-22 11:01:58 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:01:58 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Jazz" )
+2019-04-22 11:01:58 - tokenizeLyrics filteredLyrics
+2019-04-22 11:01:58 -         |> renderLineChartForWords
+2019-04-22 11:01:58 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:12:15 - shutdown request
+2019-04-22 11:12:19 - Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+2019-04-22 11:12:19 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2019-04-22 11:12:19 - For help type #help;;
+2019-04-22 11:12:19 - > val it :
+2019-04-22 11:12:19 -   ResizeArray<System.Type *
+2019-04-22 11:12:19 -               (obj ->
+2019-04-22 11:12:19 -                  seq<string *
+2019-04-22 11:12:19 -                      string> *
+2019-04-22 11:12:19 -                  string)>
+2019-04-22 11:12:19 - = seq []
+2019-04-22 11:12:19 - --> Added '/Users/samuele.resca/Downloads/IfSharp.v3.0.1' to library include path
+2019-04-22 11:12:19 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2019-04-22 11:12:19 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/NetMQ.dll' (file may be locked by F# Interactive process)
+2019-04-22 11:12:19 - #load "Paket.fsx"
+2019-04-22 11:12:19 - Paket.Package 
+2019-04-22 11:12:19 -   ["XPlot.Plotly"
+2019-04-22 11:12:19 -    "MathNet.Numerics"
+2019-04-22 11:12:19 -    "MathNet.Numerics.FSharp"
+2019-04-22 11:12:19 -    "FSharp.Data"
+2019-04-22 11:12:19 -    "Microsoft.ML"]
+2019-04-22 11:12:19 -    
+2019-04-22 11:12:19 - #load "XPlot.Plotly.Paket.fsx"
+2019-04-22 11:12:19 - #load "XPlot.Plotly.fsx"
+2019-04-22 11:12:19 - #load "Paket.Generated.Refs.fsx"
+2019-04-22 11:12:40 - open System
+2019-04-22 11:12:40 - open System.Linq
+2019-04-22 11:12:40 - open System.IO
+2019-04-22 11:12:40 - open MathNet.Numerics
+2019-04-22 11:12:40 - open MathNet.Numerics.Distributions
+2019-04-22 11:12:40 - open MathNet.Numerics.LinearAlgebra
+2019-04-22 11:12:40 - open MathNet.Numerics.Random
+2019-04-22 11:12:40 - open FSharp.Data
+2019-04-22 11:12:40 - [<CLIMutable>]
+2019-04-22 11:12:40 - type LyricsInput = 
+2019-04-22 11:12:40 -     {
+2019-04-22 11:12:40 -         Song : string
+2019-04-22 11:12:40 -         Artist : string
+2019-04-22 11:12:40 -         Genre : string
+2019-04-22 11:12:40 -         Lyrics : string
+2019-04-22 11:12:40 -         Year: int
+2019-04-22 11:12:40 -     }
+2019-04-22 11:12:40 -     
+2019-04-22 11:12:40 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-22 11:12:40 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-22 11:12:40 -     
+2019-04-22 11:12:40 -     let songLyrics = 
+2019-04-22 11:12:40 -            msft.Rows
+2019-04-22 11:12:40 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-22 11:12:40 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-22 11:12:40 -                                      Artist = (row.GetColumn "artist")
+2019-04-22 11:12:40 -                                      Genre = (row.GetColumn "genre")
+2019-04-22 11:12:40 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-22 11:12:40 -                                      Year = (row.GetColumn "year") |> int
+2019-04-22 11:12:40 -                                   })
+2019-04-22 11:12:40 -                               
+2019-04-22 11:12:40 - songLyrics
+2019-04-22 11:12:40 -     |> Seq.iter(fun row -> Console.WriteLine(row))
+2019-04-22 11:12:40 -        
+2019-04-22 11:15:37 - open XPlot.Plotly
+2019-04-22 11:15:37 - songLyrics
+2019-04-22 11:15:37 -         |> Seq.map(fun row -> row.Genre)
+2019-04-22 11:15:37 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 11:15:37 -         |> Chart.Pie
+2019-04-22 11:15:37 -         |> Chart.WithTitle "Dataset by Genre"
+2019-04-22 11:15:37 -         |> Chart.WithLegend true
+2019-04-22 11:15:54 - open XPlot.Plotly
+2019-04-22 11:15:54 - songLyrics
+2019-04-22 11:15:54 -         |> Seq.map(fun row -> row.Year)
+2019-04-22 11:15:54 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 11:15:54 -         |> Chart.Pie
+2019-04-22 11:15:54 -         |> Chart.WithTitle "Dataset by Year"
+2019-04-22 11:15:54 -         |> Chart.WithLegend true
+2019-04-22 11:16:12 - open Microsoft.ML
+2019-04-22 11:16:12 - open Microsoft.ML
+2019-04-22 11:16:12 - open Microsoft.ML.Data
+2019-04-22 11:16:12 - open Microsoft.ML.Transforms.Text
+2019-04-22 11:16:12 - let stopwords = [|"ourselves"; "hers"; "between"; "yourself"; "but"; "again"; "there"; "about"; "once"; "during"; "out"; "very"; "having"; "with"; "they"; "own"; "an"; "be"; "some"; "for"; "do"; "its"; "yours"; "such"; "into"; "of"; "most"; "itself"; "other"; "off"; "is"; "s"; "am"; "or"; "who"; "as"; "from"; "him"; "each"; "the"; "themselves"; "until"; "below"; "are"; "we"; "these"; "your"; "his"; "through"; "don"; "nor"; "me"; "were"; "her"; "more"; "himself"; "this"; "down"; "should"; "our"; "their"; "while"; "above"; "both"; "up"; "to"; "ours"; "had"; "she"; "all"; "no"; "when"; "at"; "any"; "before"; "them"; "same"; "and"; "been"; "have"; "in"; "will"; "on"; "does"; "yourselves"; "then"; "that"; "because"; "what"; "over"; "why"; "so"; "can"; "did"; "not"; "now"; "under"; "he"; "you"; "herself"; "has"; "just"; "where"; "too"; "only"; "myself"; "which"; "those"; "i"; "after"; "few"; "whom"; "t";"ll"; "being"; "if"; "theirs"; "my"; "against"; "a"; "by"; "doing"; "it"; "how"; "further"; "was"; "here"; "than"; "s"; "t"; "m"; "'re"; "'ll";"ve";"..."; "ä±"; "''"; "``"; "--"; "'d"; "el"; "la"; "que"; "y"; "de"; "en"|]
+2019-04-22 11:16:12 - let symbols = [|'\''; ' '; ','|]
+2019-04-22 11:16:12 -             
+2019-04-22 11:16:12 - let renderLineChartForWords(words: seq<string>) = 
+2019-04-22 11:16:12 -             words
+2019-04-22 11:16:12 -                 |> Seq.countBy id 
+2019-04-22 11:16:12 -                 |> Seq.sortByDescending(fun (value:string, count :int) -> count)
+2019-04-22 11:16:12 -                 |> Seq.take 15
+2019-04-22 11:16:12 -                 |> Chart.Line
+2019-04-22 11:16:12 -                         
+2019-04-22 11:16:12 - let tranformText (lyrics: seq<LyricsInput>) =
+2019-04-22 11:16:12 -             let mlContext = MLContext(seed = Nullable 0)        
+2019-04-22 11:16:12 -             let data = mlContext.Data.LoadFromEnumerable lyrics
+2019-04-22 11:16:12 -             
+2019-04-22 11:16:12 -             let pipeline = mlContext.Transforms.Text.FeaturizeText("FeaturizedLyrics", "Lyrics")
+2019-04-22 11:16:12 -                                             .Append(mlContext.Transforms.Text.NormalizeText("NormalizedLyrics", "Lyrics"))
+2019-04-22 11:16:12 -                                             .Append(mlContext.Transforms.Text.TokenizeWords("TokenizedLyric", "NormalizedLyrics", symbols))
+2019-04-22 11:16:12 -                                             .Append(mlContext.Transforms.Text.RemoveStopWords("LyricsWithNoCustomStopWords", "TokenizedLyric", stopwords))
+2019-04-22 11:16:12 -                                             .Append(mlContext.Transforms.Text.RemoveDefaultStopWords("LyricsWithNoStopWords", "LyricsWithNoCustomStopWords"))
+2019-04-22 11:16:12 -             let transformedData = pipeline.Fit(data).Transform(data)
+2019-04-22 11:16:12 -             transformedData.GetColumn<string[]>(mlContext, "LyricsWithNoStopWords")
+2019-04-22 11:16:12 -                         |> Seq.concat
+2019-04-22 11:16:12 -                         |> Seq.toList
+2019-04-22 11:16:12 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Rock" )
+2019-04-22 11:16:12 - tokenizeLyrics filteredLyrics
+2019-04-22 11:16:12 -         |> renderLineChartForWords
+2019-04-22 11:16:12 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:16:12 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Hip-Hop" )
+2019-04-22 11:16:12 - tokenizeLyrics filteredLyrics
+2019-04-22 11:16:12 -         |> renderLineChartForWords
+2019-04-22 11:16:12 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:16:12 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Pop" )
+2019-04-22 11:16:12 - tokenizeLyrics filteredLyrics
+2019-04-22 11:16:12 -         |> renderLineChartForWords
+2019-04-22 11:16:12 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:16:12 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Jazz" )
+2019-04-22 11:16:12 - tokenizeLyrics filteredLyrics
+2019-04-22 11:16:12 -         |> renderLineChartForWords
+2019-04-22 11:16:12 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:18:17 - Reporting 0 opened comms
+2019-04-22 11:23:18 - songLyrics
+2019-04-22 11:23:18 -     |> Seq.iter(fun row -> Console.WriteLine(row))
+2019-04-22 11:23:18 -        
+2019-04-22 11:25:36 - open XPlot.Plotly
+2019-04-22 11:25:36 - songLyrics
+2019-04-22 11:25:36 -         |> Seq.map(fun row -> row.Genre)
+2019-04-22 11:25:36 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 11:25:36 -         |> Chart.Pie
+2019-04-22 11:25:36 -         |> Chart.WithTitle "Dataset by Genre"
+2019-04-22 11:25:36 -         |> Chart.WithLegend true
+2019-04-22 11:25:57 - open XPlot.Plotly
+2019-04-22 11:25:57 - songLyrics
+2019-04-22 11:25:57 -         |> Seq.map(fun row -> row.Year)
+2019-04-22 11:25:57 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 11:25:57 -         |> Chart.Pie
+2019-04-22 11:25:57 -         |> Chart.WithTitle "Dataset by Year"
+2019-04-22 11:25:57 -         |> Chart.WithLegend true
+2019-04-22 11:26:14 - open Microsoft.ML
+2019-04-22 11:26:14 - open Microsoft.ML
+2019-04-22 11:26:14 - open Microsoft.ML.Data
+2019-04-22 11:26:14 - open Microsoft.ML.Transforms.Text
+2019-04-22 11:26:14 - let stopwords = [|"ourselves"; "hers"; "between"; "yourself"; "but"; "again"; "there"; "about"; "once"; "during"; "out"; "very"; "having"; "with"; "they"; "own"; "an"; "be"; "some"; "for"; "do"; "its"; "yours"; "such"; "into"; "of"; "most"; "itself"; "other"; "off"; "is"; "s"; "am"; "or"; "who"; "as"; "from"; "him"; "each"; "the"; "themselves"; "until"; "below"; "are"; "we"; "these"; "your"; "his"; "through"; "don"; "nor"; "me"; "were"; "her"; "more"; "himself"; "this"; "down"; "should"; "our"; "their"; "while"; "above"; "both"; "up"; "to"; "ours"; "had"; "she"; "all"; "no"; "when"; "at"; "any"; "before"; "them"; "same"; "and"; "been"; "have"; "in"; "will"; "on"; "does"; "yourselves"; "then"; "that"; "because"; "what"; "over"; "why"; "so"; "can"; "did"; "not"; "now"; "under"; "he"; "you"; "herself"; "has"; "just"; "where"; "too"; "only"; "myself"; "which"; "those"; "i"; "after"; "few"; "whom"; "t";"ll"; "being"; "if"; "theirs"; "my"; "against"; "a"; "by"; "doing"; "it"; "how"; "further"; "was"; "here"; "than"; "s"; "t"; "m"; "'re"; "'ll";"ve";"..."; "ä±"; "''"; "``"; "--"; "'d"; "el"; "la"; "que"; "y"; "de"; "en"|]
+2019-04-22 11:26:14 - let symbols = [|'\''; ' '; ','|]
+2019-04-22 11:26:14 -             
+2019-04-22 11:26:14 - let renderLineChartForWords(words: seq<string>) = 
+2019-04-22 11:26:14 -             words
+2019-04-22 11:26:14 -                 |> Seq.countBy id 
+2019-04-22 11:26:14 -                 |> Seq.sortByDescending(fun (value:string, count :int) -> count)
+2019-04-22 11:26:14 -                 |> Seq.take 15
+2019-04-22 11:26:14 -                 |> Chart.Line
+2019-04-22 11:26:14 -                         
+2019-04-22 11:26:14 - let tranformText (lyrics: seq<LyricsInput>) =
+2019-04-22 11:26:14 -             let mlContext = MLContext(seed = Nullable 0)        
+2019-04-22 11:26:14 -             let data = mlContext.Data.LoadFromEnumerable lyrics
+2019-04-22 11:26:14 -             
+2019-04-22 11:26:14 -             let pipeline = mlContext.Transforms.Text.FeaturizeText("FeaturizedLyrics", "Lyrics")
+2019-04-22 11:26:14 -                                             .Append(mlContext.Transforms.Text.NormalizeText("NormalizedLyrics", "Lyrics"))
+2019-04-22 11:26:14 -                                             .Append(mlContext.Transforms.Text.TokenizeWords("TokenizedLyric", "NormalizedLyrics", symbols))
+2019-04-22 11:26:14 -                                             .Append(mlContext.Transforms.Text.RemoveStopWords("LyricsWithNoCustomStopWords", "TokenizedLyric", stopwords))
+2019-04-22 11:26:14 -                                             .Append(mlContext.Transforms.Text.RemoveDefaultStopWords("LyricsWithNoStopWords", "LyricsWithNoCustomStopWords"))
+2019-04-22 11:26:14 -             let transformedData = pipeline.Fit(data).Transform(data)
+2019-04-22 11:26:14 -             transformedData.GetColumn<string[]>(mlContext, "LyricsWithNoStopWords")
+2019-04-22 11:26:14 -                         |> Seq.concat
+2019-04-22 11:26:14 -                         |> Seq.toList
+2019-04-22 11:26:14 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Rock" )
+2019-04-22 11:26:14 - tokenizeLyrics filteredLyrics
+2019-04-22 11:26:14 -         |> renderLineChartForWords
+2019-04-22 11:26:14 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:26:14 - Reporting 0 opened comms
+2019-04-22 11:26:14 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Hip-Hop" )
+2019-04-22 11:26:14 - tokenizeLyrics filteredLyrics
+2019-04-22 11:26:14 -         |> renderLineChartForWords
+2019-04-22 11:26:14 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:26:14 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Pop" )
+2019-04-22 11:26:14 - tokenizeLyrics filteredLyrics
+2019-04-22 11:26:14 -         |> renderLineChartForWords
+2019-04-22 11:26:14 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:26:14 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Jazz" )
+2019-04-22 11:26:14 - tokenizeLyrics filteredLyrics
+2019-04-22 11:26:14 -         |> renderLineChartForWords
+2019-04-22 11:26:14 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 11:28:57 - #load "Paket.fsx"
+2019-04-22 11:28:57 - Paket.Package 
+2019-04-22 11:28:57 -   ["XPlot.Plotly"
+2019-04-22 11:28:57 -    "MathNet.Numerics"
+2019-04-22 11:28:57 -    "MathNet.Numerics.FSharp"
+2019-04-22 11:28:57 -    "FSharp.Data"
+2019-04-22 11:28:57 -    "Microsoft.ML"]
+2019-04-22 11:28:57 -    
+2019-04-22 11:28:57 - #load "XPlot.Plotly.Paket.fsx"
+2019-04-22 11:28:57 - #load "XPlot.Plotly.fsx"
+2019-04-22 11:28:57 - #load "Paket.Generated.Refs.fsx"
+2019-04-22 11:29:16 - open System
+2019-04-22 11:29:16 - open System.Linq
+2019-04-22 11:29:16 - open System.IO
+2019-04-22 11:29:16 - open MathNet.Numerics
+2019-04-22 11:29:16 - open MathNet.Numerics.Distributions
+2019-04-22 11:29:16 - open MathNet.Numerics.LinearAlgebra
+2019-04-22 11:29:16 - open MathNet.Numerics.Random
+2019-04-22 11:29:16 - open FSharp.Data
+2019-04-22 11:29:16 - [<CLIMutable>]
+2019-04-22 11:29:16 - type LyricsInput = 
+2019-04-22 11:29:16 -     {
+2019-04-22 11:29:16 -         Song : string
+2019-04-22 11:29:16 -         Artist : string
+2019-04-22 11:29:16 -         Genre : string
+2019-04-22 11:29:16 -         Lyrics : string
+2019-04-22 11:29:16 -         Year: int
+2019-04-22 11:29:16 -     }
+2019-04-22 11:29:16 -     
+2019-04-22 11:29:16 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-22 11:29:16 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-22 11:29:16 -     
+2019-04-22 11:29:16 -     let songLyrics = 
+2019-04-22 11:29:16 -            msft.Rows
+2019-04-22 11:29:16 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-22 11:29:16 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-22 11:29:16 -                                      Artist = (row.GetColumn "artist")
+2019-04-22 11:29:16 -                                      Genre = (row.GetColumn "genre")
+2019-04-22 11:29:16 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-22 11:29:16 -                                      Year = (row.GetColumn "year") |> int
+2019-04-22 11:29:16 -                                   })
+2019-04-22 11:29:16 -                               
+2019-04-22 11:29:16 - Expression evaluation failed: Sharing violation on path /Users/samuele.resca/Projects/LyricsClassifier/Data/lyrics.csv
+2019-04-22 11:29:16 - IOExceptionSharing violation on path /Users/samuele.resca/Projects/LyricsClassifier/Data/lyrics.csv
+2019-04-22 11:29:16 -   at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+2019-04-22 11:29:16 -   at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6e26a535bf76467f9082042847cb7d56>:0 
+2019-04-22 11:29:16 - songLyrics
+2019-04-22 11:29:16 -     |> Seq.iter(fun row -> Console.WriteLine(row))
+2019-04-22 11:29:16 -        
+2019-04-22 11:32:01 - open XPlot.Plotly
+2019-04-22 11:32:01 - songLyrics
+2019-04-22 11:32:01 -         |> Seq.map(fun row -> row.Genre)
+2019-04-22 11:32:01 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 11:32:01 -         |> Chart.Pie
+2019-04-22 11:32:01 -         |> Chart.WithTitle "Dataset by Genre"
+2019-04-22 11:32:01 -         |> Chart.WithLegend true
+2019-04-22 11:32:24 - open XPlot.Plotly
+2019-04-22 11:32:24 - songLyrics
+2019-04-22 11:32:24 -         |> Seq.map(fun row -> row.Year)
+2019-04-22 11:32:24 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 11:32:24 -         |> Chart.Pie
+2019-04-22 11:32:24 -         |> Chart.WithTitle "Dataset by Year"
+2019-04-22 11:32:24 -         |> Chart.WithLegend true
+2019-04-22 12:19:26 - Reporting 0 opened comms
+2019-04-22 12:19:31 - #load "Paket.fsx"
+2019-04-22 12:19:31 - Paket.Package 
+2019-04-22 12:19:31 -   ["XPlot.Plotly"
+2019-04-22 12:19:31 -    "MathNet.Numerics"
+2019-04-22 12:19:31 -    "MathNet.Numerics.FSharp"
+2019-04-22 12:19:31 -    "FSharp.Data"
+2019-04-22 12:19:31 -    "Microsoft.ML"]
+2019-04-22 12:19:31 -    
+2019-04-22 12:19:31 - #load "XPlot.Plotly.Paket.fsx"
+2019-04-22 12:19:31 - #load "XPlot.Plotly.fsx"
+2019-04-22 12:19:31 - #load "Paket.Generated.Refs.fsx"
+2019-04-22 12:25:40 - open System
+2019-04-22 12:25:40 - open System.Linq
+2019-04-22 12:25:40 - open System.IO
+2019-04-22 12:25:40 - open MathNet.Numerics
+2019-04-22 12:25:40 - open MathNet.Numerics.Distributions
+2019-04-22 12:25:40 - open MathNet.Numerics.LinearAlgebra
+2019-04-22 12:25:40 - open MathNet.Numerics.Random
+2019-04-22 12:25:40 - open FSharp.Data
+2019-04-22 12:25:40 - [<CLIMutable>]
+2019-04-22 12:25:40 - type LyricsInput = 
+2019-04-22 12:25:40 -     {
+2019-04-22 12:25:40 -         Song : string
+2019-04-22 12:25:40 -         Artist : string
+2019-04-22 12:25:40 -         Genre : string
+2019-04-22 12:25:40 -         Lyrics : string
+2019-04-22 12:25:40 -         Year: int
+2019-04-22 12:25:40 -     }
+2019-04-22 12:25:40 -     
+2019-04-22 12:25:43 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-22 12:25:43 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-22 12:25:43 -     
+2019-04-22 12:25:43 -     let songLyrics = 
+2019-04-22 12:25:43 -            msft.Rows
+2019-04-22 12:25:43 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-22 12:25:43 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-22 12:25:43 -                                      Artist = (row.GetColumn "artist")
+2019-04-22 12:25:43 -                                      Genre = (row.GetColumn "genre")
+2019-04-22 12:25:43 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-22 12:25:43 -                                      Year = (row.GetColumn "year") |> int
+2019-04-22 12:25:43 -                                   })
+2019-04-22 12:25:43 -                               
+2019-04-22 12:25:43 - Expression evaluation failed: Sharing violation on path /Users/samuele.resca/Projects/LyricsClassifier/Data/lyrics.csv
+2019-04-22 12:25:43 - IOExceptionSharing violation on path /Users/samuele.resca/Projects/LyricsClassifier/Data/lyrics.csv
+2019-04-22 12:25:43 -   at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+2019-04-22 12:25:43 -   at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6e26a535bf76467f9082042847cb7d56>:0 
+2019-04-22 12:25:47 - shutdown request
+2019-04-22 12:25:51 - Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+2019-04-22 12:25:51 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2019-04-22 12:25:51 - For help type #help;;
+2019-04-22 12:25:51 - > val it :
+2019-04-22 12:25:51 -   ResizeArray<System.Type *
+2019-04-22 12:25:51 -               (obj ->
+2019-04-22 12:25:51 -                  seq<string *
+2019-04-22 12:25:51 -                      string> *
+2019-04-22 12:25:51 -                  string)>
+2019-04-22 12:25:51 - = seq []
+2019-04-22 12:25:51 - --> Added '/Users/samuele.resca/Downloads/IfSharp.v3.0.1' to library include path
+2019-04-22 12:25:51 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2019-04-22 12:25:51 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/NetMQ.dll' (file may be locked by F# Interactive process)
+2019-04-22 12:25:54 - #load "Paket.fsx"
+2019-04-22 12:25:54 - Paket.Package 
+2019-04-22 12:25:54 -   ["XPlot.Plotly"
+2019-04-22 12:25:54 -    "MathNet.Numerics"
+2019-04-22 12:25:54 -    "MathNet.Numerics.FSharp"
+2019-04-22 12:25:54 -    "FSharp.Data"
+2019-04-22 12:25:54 -    "Microsoft.ML"]
+2019-04-22 12:25:54 -    
+2019-04-22 12:25:54 - #load "XPlot.Plotly.Paket.fsx"
+2019-04-22 12:25:54 - #load "XPlot.Plotly.fsx"
+2019-04-22 12:25:54 - #load "Paket.Generated.Refs.fsx"
+2019-04-22 12:26:14 - open System
+2019-04-22 12:26:14 - open System.Linq
+2019-04-22 12:26:14 - open System.IO
+2019-04-22 12:26:14 - open MathNet.Numerics
+2019-04-22 12:26:14 - open MathNet.Numerics.Distributions
+2019-04-22 12:26:14 - open MathNet.Numerics.LinearAlgebra
+2019-04-22 12:26:14 - open MathNet.Numerics.Random
+2019-04-22 12:26:14 - open FSharp.Data
+2019-04-22 12:26:14 - [<CLIMutable>]
+2019-04-22 12:26:14 - type LyricsInput = 
+2019-04-22 12:26:14 -     {
+2019-04-22 12:26:14 -         Song : string
+2019-04-22 12:26:14 -         Artist : string
+2019-04-22 12:26:14 -         Genre : string
+2019-04-22 12:26:14 -         Lyrics : string
+2019-04-22 12:26:14 -         Year: int
+2019-04-22 12:26:14 -     }
+2019-04-22 12:26:14 -     
+2019-04-22 12:26:14 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-22 12:26:14 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-22 12:26:14 -     
+2019-04-22 12:26:14 -     let songLyrics = 
+2019-04-22 12:26:14 -            msft.Rows
+2019-04-22 12:26:14 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-22 12:26:14 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-22 12:26:14 -                                      Artist = (row.GetColumn "artist")
+2019-04-22 12:26:14 -                                      Genre = (row.GetColumn "genre")
+2019-04-22 12:26:14 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-22 12:26:14 -                                      Year = (row.GetColumn "year") |> int
+2019-04-22 12:26:14 -                                   })
+2019-04-22 12:26:14 -                               
+2019-04-22 12:28:25 - songLyrics
+2019-04-22 12:28:25 -     |> Seq.iter(fun row -> Console.WriteLine(row))
+2019-04-22 12:28:25 -        
+2019-04-22 12:31:29 - open XPlot.Plotly
+2019-04-22 12:31:29 - songLyrics
+2019-04-22 12:31:29 -         |> Seq.map(fun row -> row.Genre)
+2019-04-22 12:31:29 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 12:31:29 -         |> Chart.Pie
+2019-04-22 12:31:29 -         |> Chart.WithTitle "Dataset by Genre"
+2019-04-22 12:31:29 -         |> Chart.WithLegend true
+2019-04-22 12:31:44 - open XPlot.Plotly
+2019-04-22 12:31:44 - songLyrics
+2019-04-22 12:31:44 -         |> Seq.map(fun row -> row.Year)
+2019-04-22 12:31:44 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 12:31:44 -         |> Chart.Pie
+2019-04-22 12:31:44 -         |> Chart.WithTitle "Dataset by Year"
+2019-04-22 12:31:44 -         |> Chart.WithLegend true
+2019-04-22 12:35:44 - shutdown request
+2019-04-22 12:35:44 - shutdown request
+2019-04-22 12:36:09 - Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+2019-04-22 12:36:09 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2019-04-22 12:36:09 - For help type #help;;
+2019-04-22 12:36:09 - > val it :
+2019-04-22 12:36:09 -   ResizeArray<System.Type *
+2019-04-22 12:36:09 -               (obj ->
+2019-04-22 12:36:09 -                  seq<string *
+2019-04-22 12:36:09 -                      string> *
+2019-04-22 12:36:09 -                  string)>
+2019-04-22 12:36:09 - = seq []
+2019-04-22 12:36:09 - --> Added '/Users/samuele.resca/Downloads/IfSharp.v3.0.1' to library include path
+2019-04-22 12:36:09 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2019-04-22 12:36:09 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/NetMQ.dll' (file may be locked by F# Interactive process)
+2019-04-22 12:36:11 - #load "Paket.fsx"
+2019-04-22 12:36:11 - Paket.Package 
+2019-04-22 12:36:11 -   ["XPlot.Plotly"
+2019-04-22 12:36:11 -    "MathNet.Numerics"
+2019-04-22 12:36:11 -    "MathNet.Numerics.FSharp"
+2019-04-22 12:36:11 -    "FSharp.Data"
+2019-04-22 12:36:11 -    "Microsoft.ML"]
+2019-04-22 12:36:11 -    
+2019-04-22 12:36:11 - #load "XPlot.Plotly.Paket.fsx"
+2019-04-22 12:36:11 - #load "XPlot.Plotly.fsx"
+2019-04-22 12:36:11 - #load "Paket.Generated.Refs.fsx"
+2019-04-22 12:36:36 - Reporting 0 opened comms
+2019-04-22 12:36:36 - open System
+2019-04-22 12:36:36 - open System.Linq
+2019-04-22 12:36:36 - open System.IO
+2019-04-22 12:36:36 - open MathNet.Numerics
+2019-04-22 12:36:36 - open MathNet.Numerics.Distributions
+2019-04-22 12:36:36 - open MathNet.Numerics.LinearAlgebra
+2019-04-22 12:36:36 - open MathNet.Numerics.Random
+2019-04-22 12:36:36 - open FSharp.Data
+2019-04-22 12:36:36 - [<CLIMutable>]
+2019-04-22 12:36:36 - type LyricsInput = 
+2019-04-22 12:36:36 -     {
+2019-04-22 12:36:36 -         Song : string
+2019-04-22 12:36:36 -         Artist : string
+2019-04-22 12:36:36 -         Genre : string
+2019-04-22 12:36:36 -         Lyrics : string
+2019-04-22 12:36:36 -         Year: int
+2019-04-22 12:36:36 -     }
+2019-04-22 12:36:36 -     
+2019-04-22 12:36:36 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-22 12:36:36 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-22 12:36:36 -     
+2019-04-22 12:36:36 -     let songLyrics = 
+2019-04-22 12:36:36 -            msft.Rows
+2019-04-22 12:36:36 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-22 12:36:36 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-22 12:36:36 -                                      Artist = (row.GetColumn "artist")
+2019-04-22 12:36:36 -                                      Genre = (row.GetColumn "genre")
+2019-04-22 12:36:36 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-22 12:36:36 -                                      Year = (row.GetColumn "year") |> int
+2019-04-22 12:36:36 -                                   })
+2019-04-22 12:36:36 -                               
+2019-04-22 12:45:23 - songLyrics
+2019-04-22 12:45:23 -     |> Seq.iter(fun row -> Console.WriteLine(row))
+2019-04-22 12:45:23 -        
+2019-04-22 12:51:27 - shutdown request
+2019-04-22 12:52:27 - Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+2019-04-22 12:52:27 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2019-04-22 12:52:27 - For help type #help;;
+2019-04-22 12:52:27 - > val it :
+2019-04-22 12:52:27 -   ResizeArray<System.Type *
+2019-04-22 12:52:27 -               (obj ->
+2019-04-22 12:52:27 -                  seq<string *
+2019-04-22 12:52:27 -                      string> *
+2019-04-22 12:52:27 -                  string)>
+2019-04-22 12:52:27 - = seq []
+2019-04-22 12:52:27 - --> Added '/Users/samuele.resca/Downloads/IfSharp.v3.0.1' to library include path
+2019-04-22 12:52:27 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2019-04-22 12:52:27 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/NetMQ.dll' (file may be locked by F# Interactive process)
+2019-04-22 12:52:30 - #load "Paket.fsx"
+2019-04-22 12:52:30 - Paket.Package 
+2019-04-22 12:52:30 -   ["XPlot.Plotly"
+2019-04-22 12:52:30 -    "MathNet.Numerics"
+2019-04-22 12:52:30 -    "MathNet.Numerics.FSharp"
+2019-04-22 12:52:30 -    "FSharp.Data"
+2019-04-22 12:52:30 -    "Microsoft.ML"]
+2019-04-22 12:52:30 -    
+2019-04-22 12:52:30 - #load "XPlot.Plotly.Paket.fsx"
+2019-04-22 12:52:30 - #load "XPlot.Plotly.fsx"
+2019-04-22 12:52:30 - #load "Paket.Generated.Refs.fsx"
+2019-04-22 12:52:49 - Reporting 0 opened comms
+2019-04-22 12:52:49 - open System
+2019-04-22 12:52:49 - open System.Linq
+2019-04-22 12:52:49 - open System.IO
+2019-04-22 12:52:49 - open MathNet.Numerics
+2019-04-22 12:52:49 - open MathNet.Numerics.Distributions
+2019-04-22 12:52:49 - open MathNet.Numerics.LinearAlgebra
+2019-04-22 12:52:49 - open MathNet.Numerics.Random
+2019-04-22 12:52:49 - open FSharp.Data
+2019-04-22 12:52:49 - [<CLIMutable>]
+2019-04-22 12:52:49 - type LyricsInput = 
+2019-04-22 12:52:49 -     {
+2019-04-22 12:52:49 -         Song : string
+2019-04-22 12:52:49 -         Artist : string
+2019-04-22 12:52:49 -         Genre : string
+2019-04-22 12:52:49 -         Lyrics : string
+2019-04-22 12:52:49 -         Year: int
+2019-04-22 12:52:49 -     }
+2019-04-22 12:52:49 -     
+2019-04-22 12:52:49 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-22 12:52:49 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-22 12:52:49 -     
+2019-04-22 12:52:49 -     let songLyrics = 
+2019-04-22 12:52:49 -            msft.Rows
+2019-04-22 12:52:49 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-22 12:52:49 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-22 12:52:49 -                                      Artist = (row.GetColumn "artist")
+2019-04-22 12:52:49 -                                      Genre = (row.GetColumn "genre")
+2019-04-22 12:52:49 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-22 12:52:49 -                                      Year = (row.GetColumn "year") |> int
+2019-04-22 12:52:49 -                                   })
+2019-04-22 12:52:49 -                               
+2019-04-22 12:52:49 - songLyrics
+2019-04-22 12:52:49 -     |> Seq.iter(fun row -> Console.WriteLine(row))
+2019-04-22 12:52:49 -        
+2019-04-22 12:56:00 - open XPlot.Plotly
+2019-04-22 12:56:00 - songLyrics
+2019-04-22 12:56:00 -         |> Seq.map(fun row -> row.Genre)
+2019-04-22 12:56:00 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 12:56:00 -         |> Chart.Pie
+2019-04-22 12:56:00 -         |> Chart.WithTitle "Dataset by Genre"
+2019-04-22 12:56:00 -         |> Chart.WithLegend true
+2019-04-22 12:56:20 - open XPlot.Plotly
+2019-04-22 12:56:20 - songLyrics
+2019-04-22 12:56:20 -         |> Seq.map(fun row -> row.Year)
+2019-04-22 12:56:20 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 12:56:20 -         |> Chart.Pie
+2019-04-22 12:56:20 -         |> Chart.WithTitle "Dataset by Year"
+2019-04-22 12:56:20 -         |> Chart.WithLegend true
+2019-04-22 12:57:58 - Reporting 0 opened comms
+2019-04-22 12:58:18 - #load "Paket.fsx"
+2019-04-22 12:58:18 - Paket.Package 
+2019-04-22 12:58:18 -   ["XPlot.Plotly"
+2019-04-22 12:58:18 -    "MathNet.Numerics"
+2019-04-22 12:58:18 -    "MathNet.Numerics.FSharp"
+2019-04-22 12:58:18 -    "FSharp.Data"
+2019-04-22 12:58:18 -    "Microsoft.ML"]
+2019-04-22 12:58:18 -    
+2019-04-22 12:58:18 - #load "XPlot.Plotly.Paket.fsx"
+2019-04-22 12:58:18 - #load "XPlot.Plotly.fsx"
+2019-04-22 12:58:18 - #load "Paket.Generated.Refs.fsx"
+2019-04-22 12:58:42 - open System
+2019-04-22 12:58:42 - open System.Linq
+2019-04-22 12:58:42 - open System.IO
+2019-04-22 12:58:42 - open MathNet.Numerics
+2019-04-22 12:58:42 - open MathNet.Numerics.Distributions
+2019-04-22 12:58:42 - open MathNet.Numerics.LinearAlgebra
+2019-04-22 12:58:42 - open MathNet.Numerics.Random
+2019-04-22 12:58:42 - open FSharp.Data
+2019-04-22 12:58:42 - [<CLIMutable>]
+2019-04-22 12:58:42 - type LyricsInput = 
+2019-04-22 12:58:42 -     {
+2019-04-22 12:58:42 -         Song : string
+2019-04-22 12:58:42 -         Artist : string
+2019-04-22 12:58:42 -         Genre : string
+2019-04-22 12:58:42 -         Lyrics : string
+2019-04-22 12:58:42 -         Year: int
+2019-04-22 12:58:42 -     }
+2019-04-22 12:58:42 -     
+2019-04-22 12:58:42 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-22 12:58:42 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-22 12:58:42 -     
+2019-04-22 12:58:42 -     let songLyrics = 
+2019-04-22 12:58:42 -            msft.Rows
+2019-04-22 12:58:42 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-22 12:58:42 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-22 12:58:42 -                                      Artist = (row.GetColumn "artist")
+2019-04-22 12:58:42 -                                      Genre = (row.GetColumn "genre")
+2019-04-22 12:58:42 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-22 12:58:42 -                                      Year = (row.GetColumn "year") |> int
+2019-04-22 12:58:42 -                                   })
+2019-04-22 12:58:42 -                               
+2019-04-22 12:58:42 - Expression evaluation failed: Sharing violation on path /Users/samuele.resca/Projects/LyricsClassifier/Data/lyrics.csv
+2019-04-22 12:58:42 - IOExceptionSharing violation on path /Users/samuele.resca/Projects/LyricsClassifier/Data/lyrics.csv
+2019-04-22 12:58:42 -   at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+2019-04-22 12:58:42 -   at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6e26a535bf76467f9082042847cb7d56>:0 
+2019-04-22 12:58:42 - songLyrics
+2019-04-22 12:58:42 -     |> Seq.take 10
+2019-04-22 12:58:42 -     |> Seq.iter(fun row -> Console.WriteLine(row))
+2019-04-22 12:58:42 -        
+2019-04-22 12:58:42 - open XPlot.Plotly
+2019-04-22 12:58:42 - songLyrics
+2019-04-22 12:58:42 -         |> Seq.map(fun row -> row.Genre)
+2019-04-22 12:58:42 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 12:58:42 -         |> Chart.Pie
+2019-04-22 12:58:42 -         |> Chart.WithTitle "Dataset by Genre"
+2019-04-22 12:58:42 -         |> Chart.WithLegend true
+2019-04-22 12:58:54 - open XPlot.Plotly
+2019-04-22 12:58:54 - songLyrics
+2019-04-22 12:58:54 -         |> Seq.map(fun row -> row.Year)
+2019-04-22 12:58:54 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 12:58:54 -         |> Chart.Pie
+2019-04-22 12:58:54 -         |> Chart.WithTitle "Dataset by Year"
+2019-04-22 12:58:54 -         |> Chart.WithLegend true
+2019-04-22 12:58:59 - shutdown request
+2019-04-22 12:59:04 - Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+2019-04-22 12:59:04 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2019-04-22 12:59:04 - For help type #help;;
+2019-04-22 12:59:04 - > val it :
+2019-04-22 12:59:04 -   ResizeArray<System.Type *
+2019-04-22 12:59:04 -               (obj ->
+2019-04-22 12:59:04 -                  seq<string *
+2019-04-22 12:59:04 -                      string> *
+2019-04-22 12:59:04 -                  string)>
+2019-04-22 12:59:04 - = seq []
+2019-04-22 12:59:04 - --> Added '/Users/samuele.resca/Downloads/IfSharp.v3.0.1' to library include path
+2019-04-22 12:59:04 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2019-04-22 12:59:04 - --> Referenced '/Users/samuele.resca/Downloads/IfSharp.v3.0.1/NetMQ.dll' (file may be locked by F# Interactive process)
+2019-04-22 12:59:04 - #load "Paket.fsx"
+2019-04-22 12:59:04 - Paket.Package 
+2019-04-22 12:59:04 -   ["XPlot.Plotly"
+2019-04-22 12:59:04 -    "MathNet.Numerics"
+2019-04-22 12:59:04 -    "MathNet.Numerics.FSharp"
+2019-04-22 12:59:04 -    "FSharp.Data"
+2019-04-22 12:59:04 -    "Microsoft.ML"]
+2019-04-22 12:59:04 -    
+2019-04-22 12:59:04 - #load "XPlot.Plotly.Paket.fsx"
+2019-04-22 12:59:04 - #load "XPlot.Plotly.fsx"
+2019-04-22 12:59:04 - #load "Paket.Generated.Refs.fsx"
+2019-04-22 12:59:23 - open System
+2019-04-22 12:59:23 - open System.Linq
+2019-04-22 12:59:23 - open System.IO
+2019-04-22 12:59:23 - open MathNet.Numerics
+2019-04-22 12:59:23 - open MathNet.Numerics.Distributions
+2019-04-22 12:59:23 - open MathNet.Numerics.LinearAlgebra
+2019-04-22 12:59:23 - open MathNet.Numerics.Random
+2019-04-22 12:59:23 - open FSharp.Data
+2019-04-22 12:59:23 - [<CLIMutable>]
+2019-04-22 12:59:23 - type LyricsInput = 
+2019-04-22 12:59:23 -     {
+2019-04-22 12:59:23 -         Song : string
+2019-04-22 12:59:23 -         Artist : string
+2019-04-22 12:59:23 -         Genre : string
+2019-04-22 12:59:23 -         Lyrics : string
+2019-04-22 12:59:23 -         Year: int
+2019-04-22 12:59:23 -     }
+2019-04-22 12:59:23 -     
+2019-04-22 12:59:24 -     let trainDataPath = Path.Combine("../","Data","lyrics.csv")   
+2019-04-22 12:59:24 -     let msft = CsvFile.Load(File.Open(trainDataPath, FileMode.Open), separators = ",", quote = '"', hasHeaders= true)
+2019-04-22 12:59:24 -     
+2019-04-22 12:59:24 -     let songLyrics = 
+2019-04-22 12:59:24 -            msft.Rows
+2019-04-22 12:59:24 -            |> Seq.filter (fun row -> not(row.GetColumn "lyrics" |> String.IsNullOrEmpty))
+2019-04-22 12:59:24 -            |> Seq.map (fun row -> {  Song = (row.GetColumn "song")
+2019-04-22 12:59:24 -                                      Artist = (row.GetColumn "artist")
+2019-04-22 12:59:24 -                                      Genre = (row.GetColumn "genre")
+2019-04-22 12:59:24 -                                      Lyrics = (row.GetColumn "lyrics").Replace(Environment.NewLine, ", ")
+2019-04-22 12:59:24 -                                      Year = (row.GetColumn "year") |> int
+2019-04-22 12:59:24 -                                   })
+2019-04-22 12:59:24 -                               
+2019-04-22 12:59:24 - songLyrics
+2019-04-22 12:59:24 -     |> Seq.take 10
+2019-04-22 12:59:24 -     |> Seq.iter(fun row -> Console.WriteLine(row))
+2019-04-22 12:59:24 -        
+2019-04-22 12:59:24 - open XPlot.Plotly
+2019-04-22 12:59:24 - songLyrics
+2019-04-22 12:59:24 -         |> Seq.map(fun row -> row.Genre)
+2019-04-22 12:59:24 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 12:59:24 -         |> Chart.Pie
+2019-04-22 12:59:24 -         |> Chart.WithTitle "Dataset by Genre"
+2019-04-22 12:59:24 -         |> Chart.WithLegend true
+2019-04-22 12:59:35 - open XPlot.Plotly
+2019-04-22 12:59:35 - songLyrics
+2019-04-22 12:59:35 -         |> Seq.map(fun row -> row.Year)
+2019-04-22 12:59:35 -         |> Seq.countBy id |> Seq.toList 
+2019-04-22 12:59:35 -         |> Chart.Pie
+2019-04-22 12:59:35 -         |> Chart.WithTitle "Dataset by Year"
+2019-04-22 12:59:35 -         |> Chart.WithLegend true
+2019-04-22 12:59:44 - open Microsoft.ML
+2019-04-22 12:59:44 - open Microsoft.ML
+2019-04-22 12:59:44 - open Microsoft.ML.Data
+2019-04-22 12:59:44 - open Microsoft.ML.Transforms.Text
+2019-04-22 12:59:44 - let stopwords = [|"ourselves"; "hers"; "between"; "yourself"; "but"; "again"; "there"; "about"; "once"; "during"; "out"; "very"; "having"; "with"; "they"; "own"; "an"; "be"; "some"; "for"; "do"; "its"; "yours"; "such"; "into"; "of"; "most"; "itself"; "other"; "off"; "is"; "s"; "am"; "or"; "who"; "as"; "from"; "him"; "each"; "the"; "themselves"; "until"; "below"; "are"; "we"; "these"; "your"; "his"; "through"; "don"; "nor"; "me"; "were"; "her"; "more"; "himself"; "this"; "down"; "should"; "our"; "their"; "while"; "above"; "both"; "up"; "to"; "ours"; "had"; "she"; "all"; "no"; "when"; "at"; "any"; "before"; "them"; "same"; "and"; "been"; "have"; "in"; "will"; "on"; "does"; "yourselves"; "then"; "that"; "because"; "what"; "over"; "why"; "so"; "can"; "did"; "not"; "now"; "under"; "he"; "you"; "herself"; "has"; "just"; "where"; "too"; "only"; "myself"; "which"; "those"; "i"; "after"; "few"; "whom"; "t";"ll"; "being"; "if"; "theirs"; "my"; "against"; "a"; "by"; "doing"; "it"; "how"; "further"; "was"; "here"; "than"; "s"; "t"; "m"; "'re"; "'ll";"ve";"..."; "ä±"; "''"; "``"; "--"; "'d"; "el"; "la"; "que"; "y"; "de"; "en"|]
+2019-04-22 12:59:44 - let symbols = [|'\''; ' '; ','|]
+2019-04-22 12:59:44 -             
+2019-04-22 12:59:44 - let renderLineChartForWords(words: seq<string>) = 
+2019-04-22 12:59:44 -             words
+2019-04-22 12:59:44 -                 |> Seq.countBy id 
+2019-04-22 12:59:44 -                 |> Seq.sortByDescending(fun (value:string, count :int) -> count)
+2019-04-22 12:59:44 -                 |> Seq.take 15
+2019-04-22 12:59:44 -                 |> Chart.Line
+2019-04-22 12:59:44 -                         
+2019-04-22 12:59:44 - let tranformText (lyrics: seq<LyricsInput>) =
+2019-04-22 12:59:44 -             let mlContext = MLContext(seed = Nullable 0)        
+2019-04-22 12:59:44 -             let data = mlContext.Data.LoadFromEnumerable lyrics
+2019-04-22 12:59:44 -             
+2019-04-22 12:59:44 -             let pipeline = mlContext.Transforms.Text.FeaturizeText("FeaturizedLyrics", "Lyrics")
+2019-04-22 12:59:44 -                                             .Append(mlContext.Transforms.Text.NormalizeText("NormalizedLyrics", "Lyrics"))
+2019-04-22 12:59:44 -                                             .Append(mlContext.Transforms.Text.TokenizeWords("TokenizedLyric", "NormalizedLyrics", symbols))
+2019-04-22 12:59:44 -                                             .Append(mlContext.Transforms.Text.RemoveStopWords("LyricsWithNoCustomStopWords", "TokenizedLyric", stopwords))
+2019-04-22 12:59:44 -                                             .Append(mlContext.Transforms.Text.RemoveDefaultStopWords("LyricsWithNoStopWords", "LyricsWithNoCustomStopWords"))
+2019-04-22 12:59:44 -             let transformedData = pipeline.Fit(data).Transform(data)
+2019-04-22 12:59:44 -             transformedData.GetColumn<string[]>(mlContext, "LyricsWithNoStopWords")
+2019-04-22 12:59:44 -                         |> Seq.concat
+2019-04-22 12:59:44 -                         |> Seq.toList
+2019-04-22 12:59:57 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Rock" )
+2019-04-22 12:59:57 - tokenizeLyrics filteredLyrics
+2019-04-22 12:59:57 -         |> renderLineChartForWords
+2019-04-22 12:59:57 - The value or constructor 'tokenizeLyrics' is not defined.
+2019-04-22 13:00:10 - open Microsoft.ML
+2019-04-22 13:00:10 - open Microsoft.ML
+2019-04-22 13:00:10 - open Microsoft.ML.Data
+2019-04-22 13:00:10 - open Microsoft.ML.Transforms.Text
+2019-04-22 13:00:10 - let stopwords = [|"ourselves"; "hers"; "between"; "yourself"; "but"; "again"; "there"; "about"; "once"; "during"; "out"; "very"; "having"; "with"; "they"; "own"; "an"; "be"; "some"; "for"; "do"; "its"; "yours"; "such"; "into"; "of"; "most"; "itself"; "other"; "off"; "is"; "s"; "am"; "or"; "who"; "as"; "from"; "him"; "each"; "the"; "themselves"; "until"; "below"; "are"; "we"; "these"; "your"; "his"; "through"; "don"; "nor"; "me"; "were"; "her"; "more"; "himself"; "this"; "down"; "should"; "our"; "their"; "while"; "above"; "both"; "up"; "to"; "ours"; "had"; "she"; "all"; "no"; "when"; "at"; "any"; "before"; "them"; "same"; "and"; "been"; "have"; "in"; "will"; "on"; "does"; "yourselves"; "then"; "that"; "because"; "what"; "over"; "why"; "so"; "can"; "did"; "not"; "now"; "under"; "he"; "you"; "herself"; "has"; "just"; "where"; "too"; "only"; "myself"; "which"; "those"; "i"; "after"; "few"; "whom"; "t";"ll"; "being"; "if"; "theirs"; "my"; "against"; "a"; "by"; "doing"; "it"; "how"; "further"; "was"; "here"; "than"; "s"; "t"; "m"; "'re"; "'ll";"ve";"..."; "ä±"; "''"; "``"; "--"; "'d"; "el"; "la"; "que"; "y"; "de"; "en"|]
+2019-04-22 13:00:10 - let symbols = [|'\''; ' '; ','|]
+2019-04-22 13:00:10 -             
+2019-04-22 13:00:10 - let renderLineChartForWords(words: seq<string>) = 
+2019-04-22 13:00:10 -             words
+2019-04-22 13:00:10 -                 |> Seq.countBy id 
+2019-04-22 13:00:10 -                 |> Seq.sortByDescending(fun (value:string, count :int) -> count)
+2019-04-22 13:00:10 -                 |> Seq.take 15
+2019-04-22 13:00:10 -                 |> Chart.Line
+2019-04-22 13:00:10 -                         
+2019-04-22 13:00:10 - let tokenizeLyrics (lyrics: seq<LyricsInput>) =
+2019-04-22 13:00:10 -             let mlContext = MLContext(seed = Nullable 0)        
+2019-04-22 13:00:10 -             let data = mlContext.Data.LoadFromEnumerable lyrics
+2019-04-22 13:00:10 -             
+2019-04-22 13:00:10 -             let pipeline = mlContext.Transforms.Text.FeaturizeText("FeaturizedLyrics", "Lyrics")
+2019-04-22 13:00:10 -                                             .Append(mlContext.Transforms.Text.NormalizeText("NormalizedLyrics", "Lyrics"))
+2019-04-22 13:00:10 -                                             .Append(mlContext.Transforms.Text.TokenizeWords("TokenizedLyric", "NormalizedLyrics", symbols))
+2019-04-22 13:00:10 -                                             .Append(mlContext.Transforms.Text.RemoveStopWords("LyricsWithNoCustomStopWords", "TokenizedLyric", stopwords))
+2019-04-22 13:00:10 -                                             .Append(mlContext.Transforms.Text.RemoveDefaultStopWords("LyricsWithNoStopWords", "LyricsWithNoCustomStopWords"))
+2019-04-22 13:00:10 -             let transformedData = pipeline.Fit(data).Transform(data)
+2019-04-22 13:00:10 -             transformedData.GetColumn<string[]>(mlContext, "LyricsWithNoStopWords")
+2019-04-22 13:00:10 -                         |> Seq.concat
+2019-04-22 13:00:10 -                         |> Seq.toList
+2019-04-22 13:00:10 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Rock" )
+2019-04-22 13:00:10 - tokenizeLyrics filteredLyrics
+2019-04-22 13:00:10 -         |> renderLineChartForWords
+2019-04-22 13:01:16 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Hip-Hop" )
+2019-04-22 13:01:16 - tokenizeLyrics filteredLyrics
+2019-04-22 13:01:16 -         |> renderLineChartForWords
+2019-04-22 13:02:15 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Pop" )
+2019-04-22 13:02:15 - tokenizeLyrics filteredLyrics
+2019-04-22 13:02:15 -         |> renderLineChartForWords
+2019-04-22 13:04:07 - ### Words by genre - Jazz
+2019-04-22 13:04:07 - Unexpected symbol # in directive. Expected identifier or other token.
+2019-04-22 13:04:07 - parse error
+2019-04-22 13:04:16 - let filteredLyrics = songLyrics |> Seq.filter(fun row -> row.Genre = "Jazz" )
+2019-04-22 13:04:16 - tokenizeLyrics filteredLyrics
+2019-04-22 13:04:16 -         |> renderLineChartForWords

@@ -3,3 +3,6 @@
 \.idea/\.idea\.LyricsClassifier/
 bin
 obj
+./Data/
+
+Data/lyrics\.csv
