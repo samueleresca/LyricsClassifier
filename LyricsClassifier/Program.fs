@@ -80,7 +80,7 @@ let buildAndTrainModel (lyrics: seq<LyricsInput>) =
 
     // (OPTIONAL) Peek data (such as 2 records) in training DataView after applying the ProcessPipeline's transformations into "Features" 
     Common.ConsoleHelper.peekDataViewInConsole<LyricsInput> mlContext trainingDataView dataProcessPipeline 2 |> ignore
-    //Common.ConsoleHelper.peekVectorColumnDataInConsole mlContext "Features" trainingDataView dataProcessPipeline 2 |> ignore
+    Common.ConsoleHelper.peekVectorColumnDataInConsole mlContext "Features" trainingDataView dataProcessPipeline 2 |> ignore
     
     // STEP 3: Create the selected training algorithm/trainer
     let trainer =
@@ -91,9 +91,6 @@ let buildAndTrainModel (lyrics: seq<LyricsInput>) =
         dataProcessPipeline
             .Append(trainer)
             .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"))
-            
-
-
     
     // STEP 4: Cross-Validate with single dataset (since we don't have two datasets, one for training and for evaluate)
     // in order to evaluate and get the model's accuracy metrics
@@ -103,14 +100,11 @@ let buildAndTrainModel (lyrics: seq<LyricsInput>) =
     let watchCrossValTime = System.Diagnostics.Stopwatch.StartNew()
 
     trainingDataView.Preview() |> ignore;
-       
 
     //Stop measuring time
     watchCrossValTime.Stop()
     printfn "Time Cross-Validating: %d miliSecs"  watchCrossValTime.ElapsedMilliseconds
  
-  //  |> Common.ConsoleHelper.printMulticlassClassificationFoldsAverageMetrics (trainer.ToString()) 
-
     // STEP 5: Train the model fitting to the DataSet
     printfn "=============== Training the model ==============="
     let trainedModel = modelBuilder.Fit(trainingDataView)
